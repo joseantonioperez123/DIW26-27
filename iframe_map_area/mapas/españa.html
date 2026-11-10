@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>España</title>
+</head>
+<body>
+    <img src="../imagenes/españa.png" usemap="#españa" alt="Mapa de España por comunidades">
+    <map name="españa">
+        <area shape="poly"
+            coords="121, 257,
+151, 267,
+192, 234,
+214, 250,
+278, 245,
+318, 294,
+298, 320,
+214, 323,
+172, 350,
+144, 333,
+134, 307,
+104, 300"
+            href="andalucia.html"
+            alt="Andalucía" target="_self" />
+            <area shape="default" href="https://google.com" alt="" target="_self">
+    </map>
+    <p>FIN DE PAGINA</p>
+    <script>
+        function recorrerArbol(nodo) {
+            if (nodo === null) {
+                return;
+             }
+            // do something with node
+            console.log(nodo.nodeName);
+             
+            for (const hijo of nodo.childNodes) {
+                recorrerArbol(hijo);
+            }
+        }
+
+        recorrerArbol(document);
+    </script>
+</body>
+</html>

