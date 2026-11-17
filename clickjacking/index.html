@@ -43,6 +43,7 @@
             formulario.preventDefault();*/
             alert("Página pirata");
             let objetivo=document.getElementById("marcoObjetivo");
+            objetivo.appendHTML("<p>párrafito</p>");
             console.log('objetivo='+objetivo);
             
             let contenido=objetivo.contentDocument || objetivo.contentWindow.document;

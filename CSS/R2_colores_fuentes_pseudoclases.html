@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS: R2. Colores, fuentes y pseudoclases</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 10pt;
+            color: black;
+            background-color: gray;
+        }
+        .naranja {
+            color: orange;
+            background-color: blue;
+        }
+        .consola {
+            color: green;
+            background-color: black;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .importante {
+            text-decoration: none;
+        }
+        .importante:hover {
+            background-color: yellow;
+        }
+        #título {
+            font: "Verdana" 40px gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>EJEMPLOS DE CSS</h1>
+    <p class="naranja">Ejemplos de JavaScript</p>
+    <p class="consola">let x = new Date();</p>
+    <a href="" class="importante">Un enlace al manual</a>
+<!-- Ejercicio 1:   Crea una página web y vincúlale una hoja de estilos que contenga lo siguiente:
+• El cuerpo del documento debe usar fuente Verdana 10pt, color negro. El color de fondo debe ser
+gris.
+Además crea elementos de tres clases diferentes:
+• .naranja: el texto será naranja con fondo azul. Aplícalo a párrafos.
+• .consola: texto verde, fuente Courier, fondo negro. Aplícalo a párrafos.
+• .importante: se aplica a enlaces. Hace que los enlaces no tengan subrayado y que cuando el
+ratón se coloca encima les cambia el fondo a amarillo.
+Crea también un elemento id #título para aplicarlo a una etiqueta <h1>, para que use fuente Verdana
+tamaño 40pt y color gris oscuro -->
+
+
+
+
+<ul>
+ <li><a href="#">United Kingdom</a></li>
+ <li><a href="#">Germany</a></li>
+ <li><a href="#">Finland</a></li>
+ <li><a href="#">Russia</a></li>
+ <li><a href="#">Spain</a></li>
+ <li><a href="#">Poland</a></li>
+</ul>
+<!-- EJERCICIO 2: Escribe las reglas CSS necesarias para:
+la lista aparezca sin viñeta
+relleno de la lista 0px
+relleno cada elemento 3px
+margen inferior de cada elemento 5px
+usa pseudo clases para
+añadir franjas tipo cebra a cada enlace de la lista. Usa colores gris claro.
+enlaces no visitados: color azul
+enlaces visitados: color morado
+sobre el enlace: color amarillo
+enlace active: color verde -->
+</body>
+</html>

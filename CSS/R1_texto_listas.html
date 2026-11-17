@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS: R1. texto y listas</title>
+    <style>
+        body { font-family: Arial, Helvetica, sans-serif; }
+        .femeninos { color: blue; }
+        .masculinos { color: red; }
+        .negrita { font-weight: bold; }
+        .cursiva { font-style: italic; }
+        .romanos {
+            list-style-type: lower-roman;
+            /*text-align: right;
+            list-style-position:inside; para que los números también acompañen */
+            margin-left: 170px;
+        }
+        .alfabeticos { list-style-type: lower-alpha; }
+        .romanos > li {
+            /*line-height: 150%;*/
+            margin-bottom: 10px;
+        }
+        .romanos > li::marker {
+            color: black;
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+<!--    Dorothea Brooke y Sydney Carton son texto en negrita
+Joshua Rigg y Madame Defarge están en cursiva
+La lista para Middlemarch se enumera con números romanos
+La lista de Historia de dos ciudades se enumera con caracteres alfabéticos.
+Los elementos de la lista para Middlemarch están más espaciados.
+La lista para Middlemarch se ha movido a la derecha.
+La fuente serif no se usa en ninguna parte de la página. -->
+<h2>Middlemarch</h2>
+<h3>George Eliot</h3>
+<ul class="romanos">
+    <li class="negrita femeninos">Dorothea Brooke</li>
+    <li class="femeninos">Celia Brooke</li>
+    <li class="masculinos">Edward Casaubon</li>
+    <li class="masculinos">Sir James Chettam</li>
+    <li class="cursiva masculinos">Joshua Rigg</li>
+    <li class="masculinos">Will Ladislaw</li>
+    <li class="masculinos">Tertius Lydgate</li>
+    <li class="masculinos">Rosamond Vincy</li>
+</ul>
+<br><br>
+<h2>A Tale of Two Cities</h2>
+<h3>Charles Dickens</h3>
+<ul class="alfabeticos">
+    <li><span class="masculinos">Charels Danay</span></li>
+    <li><span class="negrita femeninos">Sydney Carton</span></li>
+    <li><span class="masculinos">Doctor Manette</span></li>
+    <li><span class="femeninos">Lucie Mantte</span></li>
+    <li><span class="cursiva femeninos">Madame Defarge</span></li>
+    <li><span class="femeninos">Miss Pross</span></li>
+</ul>
+</body>
+</html>
