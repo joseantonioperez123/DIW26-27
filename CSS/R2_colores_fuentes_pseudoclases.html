@@ -29,10 +29,47 @@
         #título {
             font: "Verdana" 40px gray;
         }
+        /* ejercicio 2 */
+        #ejercicio2 { width: 300px; }
+        .paises {
+            list-style: none;
+            padding: 0;
+            margin-left: 140px;
+        }
+        .paises li {
+            padding: 3px;
+            margin-bottom: 5px;
+        }
+        .paises li:nth-child(odd) { background-color: beige; }
+        .paises li:nth-child(even) { background-color: gray; }
+        #ejercicio2 a { color: blue; }
+        #ejercicio2 a:visited { color: purple; }
+        #ejercicio2 a:hover { color: yellow; }
+        #ejercicio2 a:active { color: green; }
+
+        #ejercicio3 ul li:first-child { font-size: 50%; color: blue;}
+        #ejercicio3 ul li:nth-child(2) { font-size: 75%;}
+        #ejercicio3 ul li:nth-child(3) { font-size: 100%;}
+        #ejercicio3 ul li:nth-child(4) { font-size: 125%;}
+        #ejercicio3 ul li:last-child { font-size: 150%; color: blue;}
+
+        #ejercicio4 h1 {
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            color: darkred;
+        }
+        #ejercicio4 ul {
+            border-left: 30px;
+            border-top: 50px;
+        }
+        #ejercicio4 li {
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
-    <h1>EJEMPLOS DE CSS</h1>
+    <h1>1. EJEMPLOS DE CSS</h1>
     <p class="naranja">Ejemplos de JavaScript</p>
     <p class="consola">let x = new Date();</p>
     <a href="" class="importante">Un enlace al manual</a>
@@ -49,8 +86,9 @@ tamaño 40pt y color gris oscuro -->
 
 
 
-
-<ul>
+<div id="ejercicio2">
+<h1>2. Bandas alternas</h1>
+<ul class="paises">
  <li><a href="#">United Kingdom</a></li>
  <li><a href="#">Germany</a></li>
  <li><a href="#">Finland</a></li>
@@ -58,6 +96,7 @@ tamaño 40pt y color gris oscuro -->
  <li><a href="#">Spain</a></li>
  <li><a href="#">Poland</a></li>
 </ul>
+</div>
 <!-- EJERCICIO 2: Escribe las reglas CSS necesarias para:
 la lista aparezca sin viñeta
 relleno de la lista 0px
@@ -69,5 +108,85 @@ enlaces no visitados: color azul
 enlaces visitados: color morado
 sobre el enlace: color amarillo
 enlace active: color verde -->
+
+<!-- EJERCICIO 3: Dado el siguiente código HTML, y utilizando las pseudo-clases first-child, first-of-type, nth-of-type, 
+nth-last-of-type, last-of-type y/o last-child conseguir el siguiente resultado: -->
+<div id="ejercicio3">
+    <h1>3. li de distintos tamaños</h1>
+<ul> 
+<li>Primero</li> 
+<li>Segundo</li> 
+<li>Tercero</li> 
+<li>Cuarto</li> 
+<li>Quinto</li> 
+</ul>
+</div>
+
+<!-- EJERCICIIO 4
+El HTML que sigue es para una lista simple. Tienes que darle formato siguiendo las siguientes reglas: 
+• los elementos de la lista deben aparecer al menos 20 píxeles desde el borde izquierdo de la 
+página 
+• los elementos de la lista estarán separados al menos10 píxeles entre sí 
+• centrar el encabezado 
+• mantener la lista al menos 50 píxeles del encabezado 
+• los títulos de los libros en la lista no deben mostrarse en una fuente serif 
+• el encabezado debe usar una fuente diferente a la lista 
+• el texto del encabezado debe ser rojo oscuro 
+• rompe las reglas CSS en dos archivos .css diferentes. Un archivo debe contener las reglas de 
+espaciado, el otro las reglas de fuentes o  colores. Enlazar ambos en tu documento HTML. 
+• En lugar de números, haz que los elementos de la lista estén ordenados alfabéticamente 
+• Copia la lista en otra diferente. Esta lista será desordenada. Aplica un estilo a los elementos de 
+la lista para que tengan puntos de viñeta cuadrada. El fondo de la lista será Amarillo claro. El 
+fondo de cada element será gris.  
+• Haz otra copia. La viñeta será una imagen.  -->
+<div id="ejercicio4">
+<H1>4. listas, espaciado, colores</H1> 
+<h1>Books</h1> 
+<ol> 
+<li>A la Recherche de Temps Perdu</li> 
+<li>Middlemarch</li> 
+<li>Ulysses</li> 
+<li>Don Quixote</li> 
+<li>Moby Dick</li> 
+<li>Hamlet</li> 
+<li>War and Peace</li> 
+<li>The Odyssey</li> 
+<li>The Great Gatsby</li> 
+<li>The Divine Comedy</li> 
+<li>Madame Bovary</li> 
+<li>The Brothers Karamazov</li> 
+<li>One Hundred Years of Solitude</li> 
+<li>The Iliad</li> 
+<li>Lolita</li> 
+<li>Anna Karenina</li> 
+<li>Crime and Punishment</li> 
+<li>The Sound and the Fury</li> 
+<li>Wuthering Heights</li> 
+<li>Le Rouge et le Noir</li> 
+</ol> 
+</div>
+
+
+<!--
+ .hermano + .padre  div { 
+            font-size: xx-large; 
+            margin-left: 60px; 
+        }   <<<<<<<<<< cualquier etiqueta <div> que se encuentre dentro de un elemento .padre,
+                     siempre y cuando este .padre aparezca inmediatamente después 
+                     de un elemento .hermano al mismo nivel.
+div#diva ~ p { 
+                background-color:lightgreen; 
+        } <<<<<<<<< aplica a todos los p que aparecen a continuación de un div con id diva
+                    y comparten el mismo elemento padre (hermanos) 
+div#diva + p { 
+                background-color:lightgreen; 
+        } <<<<<<<<< aplica al p que aparece a continuación de un div con id diva
+                    y comparten el mismo elemento padre (hermano adyacente)
+div#diva  p { 
+                background-color:lightgreen; 
+        } <<<<<<<<< aplica a todos los p que aparecen dentro de un div con id diva
+                    
+-->
+
 </body>
 </html>
