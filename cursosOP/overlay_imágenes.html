@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta sombreada al pasar el ratón</title>
+    <style>
+    .tarjeta {
+        position: relative;     /* necesario para el hijo absoluto */
+        overflow: hidden;
+        border-radius: 12px;
+        padding: 20px;
+        width: fit-content; /* para que no ocupe todo el ancho de la página */
+    }
+
+    /* El overlay es invisible por defecto */
+    .tarjeta::after {
+        content: "";
+        position: absolute;
+        inset: 0;               /* top/right/bottom/left: 0 */
+        background: rgba(0, 0, 0, 0);
+        transition: background 0.3s ease;
+    }
+
+    /* Al hacer hover, oscurecemos la tarjeta */
+    .tarjeta:hover::after {
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    /* Imagen de fondo de ejemplo */
+    .tarjeta-imagen {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+    }
+    </style>
+</head>
+<body>
+    <div class="tarjeta">
+        <p>Esto es un ejemplo con imagen de una tarjeta</p>
+        <img src="imagenes/cabecera_moodle.jpg" alt="UN EJEMPLO">
+    </div>
+</body>
+</html>

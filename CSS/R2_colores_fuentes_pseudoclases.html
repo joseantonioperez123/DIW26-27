@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS: R2. Colores, fuentes y pseudoclases</title>
+    <!-- para el ejercicio 4 dividir CSS en dos archivos -->
+    <link rel="stylesheet" href="">
     <style>
         body {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -58,13 +60,25 @@
             text-align: center;
             color: darkred;
         }
-        #ejercicio4 ul {
+        #ejercicio4 ol {
             border-left: 30px;
             border-top: 50px;
         }
-        #ejercicio4 li {
+        #ejercicio4 ol li {
             font-family: Arial, Helvetica, sans-serif;
             margin-bottom: 10px;
+            left: 30px;
+            list-style-type: lower-alpha;
+        }
+        #ejercicio4 ul li {
+            list-style-type: square;
+            background-color: gray;
+            padding: 5px;
+            margin: 5px;
+        }
+        #ejercicio4 ul {
+            background-color: lightyellow;
+            width: fit-content;
         }
     </style>
 </head>
@@ -164,6 +178,31 @@ fondo de cada element será gris.
 <li>Wuthering Heights</li> 
 <li>Le Rouge et le Noir</li> 
 </ol> 
+
+<h1>Books sin orden</h1> 
+<ul> 
+<li>A la Recherche de Temps Perdu</li> 
+<li>Middlemarch</li> 
+<li>Ulysses</li> 
+<li>Don Quixote</li> 
+<li>Moby Dick</li> 
+<li>Hamlet</li> 
+<li>War and Peace</li> 
+<li>The Odyssey</li> 
+<li>The Great Gatsby</li> 
+<li>The Divine Comedy</li> 
+<li>Madame Bovary</li> 
+<li>The Brothers Karamazov</li> 
+<li>One Hundred Years of Solitude</li> 
+<li>The Iliad</li> 
+<li>Lolita</li> 
+<li>Anna Karenina</li> 
+<li>Crime and Punishment</li> 
+<li>The Sound and the Fury</li> 
+<li>Wuthering Heights</li> 
+<li>Le Rouge et le Noir</li> 
+</ul> 
+
 </div>
 
 

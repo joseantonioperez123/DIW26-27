@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS en tablas y forms</title>
+    <style>
+        /* ejercicio 1 */
+        #ejercicio1 {
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+
+        #ejercicio1 th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+        #ejercicio1 th {
+            background-color: #333;
+        }
+        #ejercicio2 {
+            width: 100%;
+            border-collapse: separate;
+            border-width: 0px;
+        }
+        #ejercicio2 th {
+            background-color: deepskyblue;
+        }
+        #ejercicio2:nth-child(even) {
+            background-color: aquamarine;
+        }
+        #ejercicio2 tr:nth-child(odd) {
+            background-color:beige;
+        }
+    </style>
+</head>
+<body>
+    <!-- ejercicio 1 -->
+     <h3>Ejercicio 1</h3>
+    <table id="ejercicio1">
+        <tr><th>A</th><th>B</th><th>C</th></tr>
+        <tr><td>1.1</td><td>1.2</td><td rowspan="2">1.3 2.3</td></tr>
+        <tr><td colspan="2">2.1 2.2</td></tr>
+    </table>
+    <!-- ejercicio 2 -->
+     <h3>Ejercicio 2</h3>
+    <table id="ejercicio2">
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+            <th>D</th>
+        </tr>
+        <tr>
+            <td>1.1</td>
+            <td>1.2</td>
+            <td>1.3</td>
+            <td>1.4</td>
+        </tr>
+        <tr>
+            <td>2.1</td>
+            <td>2.2</td>
+            <td>2.3</td>
+            <td>2.4</td>
+        </tr>
+        <tr>
+            <td>3.1</td>
+            <td>3.2</td>
+            <td>3.3</td>
+            <td>3.4</td>
+        </tr>
+        <tr>
+            <td colspan=2>Fila 4.1</td>
+            <td colspan=2>Fila 4.2</td>
+        </tr>
+    </table>
+</body>
+</html>
